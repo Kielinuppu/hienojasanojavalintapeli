@@ -1,0 +1,149 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 120%;
+    padding-top: 0;
+}
+
+#game {
+    text-align: center;
+    width: 100%;
+    max-width: 950px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 13px rgba(0,0,0,0.1);
+    margin-top: 0;
+    min-height: 75vh;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+    margin: 5px 0 10px 0;
+}
+
+#question-container, #start-screen {
+    position: relative;
+    gap: 20px;
+}
+
+.question-image {
+    width: 45%;
+    max-width: 340px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin: 15px 0;
+}
+
+.option {
+    width: 32%;
+    max-width: 225px;
+    border: 4px solid rgb(242, 242, 243);
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.option.selected {
+    border-color: black;
+}
+
+.option.correct {
+    border-color: green;
+}
+
+.option.incorrect {
+    border-color: red;
+}
+
+#game-controls {
+    position: relative;
+    margin-top: 15px;
+    height: 70px;
+}
+
+#check-button, #next-arrow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#check-button, #start-button, button[onclick="restartGame()"] {
+    font-family: 'Quicksand', sans-serif;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+#check-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#next-arrow {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#stars-container, #final-stars-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.star-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+    #check-button, #start-button, button[onclick="restartGame()"] {
+        padding: 10px 15px;
+        font-size: 100%;
+    }
+
+    #next-arrow {
+        width: 45px;
+    }
+
+    .option {
+        width: 42%;
+    }
+}

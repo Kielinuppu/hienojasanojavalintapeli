@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIENOJA SANOJA ON PALJON</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="start-screen">
+            <h1>HIENOJA SANOJA ON PALJON</h1>
+            <button id="start-button">ALOITA</button>
+        </div>
+
+        <div id="question-container" style="display: none;">
+            <h2 id="question-text">MITÄ SANOT?</h2>
+            <img id="question-image" class="question-image">
+            <div class="options">
+                <img id="option1" class="option" onclick="selectOption(1)">
+                <img id="option2" class="option" onclick="selectOption(2)">
+            </div>
+            <div id="game-controls">
+                <button id="check-button" onclick="checkAnswer()">TARKISTA</button>
+                <img id="next-arrow" src="nuoli.png" onclick="nextQuestion()">
+            </div>
+        </div>
+        <div id="stars-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
