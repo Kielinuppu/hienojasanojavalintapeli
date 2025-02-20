@@ -233,7 +233,7 @@ function nextQuestion() {
 function showResult() {
     const questionContainer = document.getElementById('question-container');
     questionContainer.innerHTML = `
-        <h1>KOHTELIAAT SANAT</h1>
+        <h1>HIENOJA SANOJA ON PALJON</h1>
         <p id="result">Sait ${correctAnswers} / ${currentQuestions.length} oikein</p>
         <div id="final-stars-container">${'<img src="tahti.png" alt="Star" class="star-icon">'.repeat(correctAnswers)}</div>
         <button onclick="restartGame()">PELAA UUDELLEEN</button>
